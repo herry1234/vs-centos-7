@@ -39,7 +39,7 @@ fetch_iso() {
     gpg --list-keys | grep 4096R/F4A80EB5 > /dev/null
     if [[ $? -gt 0 ]]; then
         echo "Adding gpg signing keys"
-        gpg --keyserver pool.sks-keyservers.net --recv-keys 6341AB2753D78A78A7C27BB124C6A8A7F4A80EB5
+        gpg --keyserver keyserver.ubuntu.com --recv-keys 6341AB2753D78A78A7C27BB124C6A8A7F4A80EB5
     fi
     set -e
 

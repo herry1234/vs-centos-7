@@ -56,7 +56,7 @@ Videosolar
 * Firewall enabled with SSH allowed
 * Passwords are using SHA512
 * Firstboot disabled
-* SELinux is set to permissive
+* SELinux is set to disabled
 * Timezone is set to UTC
 * Disk is 10GB in size (8GB for / and the rest for swap)
 * Default packages installed
@@ -67,10 +67,7 @@ Videosolar
    * iputils
    * man
    * me-centos
-   * ntp
-   * ntpdate
    * parted
    * vim-common
    * vim-enhanced
    * vim-minimal
-   * wget
