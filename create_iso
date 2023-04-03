@@ -11,13 +11,14 @@ IFS=$'\n\t'
 CUR_TIME=$(date +%FT%TZ)
 CUSTOM_RPMS=./RPMS
 DVD_LAYOUT=/data/centos-7-iso-layout
-DVD_TITLE='CentOS-7-Joyent'
-ISO=CentOS-7-x86_64-Minimal-1511.iso
+DVD_TITLE='CentOS-7-Videosolar'
+ISO=CentOS-7-x86_64-Minimal-2009.iso
 ISO_DIR=/data/fetched-iso
-ISO_FILENAME=./centos-7-joyent.iso
+ISO_FILENAME=./centos-7-videosolar.iso
 KS_CFG=./ks.cfg
 GUESTTOOLS=sdc-vmtools
-MIRROR=https://buildlogs.centos.org/rolling/7/isos/x86_64
+# MIRROR=https://buildlogs.centos.org/rolling/7/isos/x86_64
+MIRROR=https://mirrors.aliyun.com/centos/7/isos/x86_64/
 MOUNT_POINT=/mnt/centos7
 
 fetch_iso() {
@@ -141,7 +142,7 @@ create_newiso() {
     echo "Creating NEW ISO"
     mkisofs -r -R -J -T -v \
      -no-emul-boot -boot-load-size 4 -boot-info-table \
-     -V "$DVD_TITLE" -p "Joyent" \
+     -V "$DVD_TITLE" -p "VideoSolar" \
      -A "$DVD_TITLE - $CUR_TIME" \
      -b isolinux/isolinux.bin -c isolinux/boot.cat \
      -x "lost+found" -o $ISO_FILENAME $DVD_LAYOUT

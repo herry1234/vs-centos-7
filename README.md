@@ -1,13 +1,13 @@
 # Centos 7 ISO Builder
 
 This repo allows one to create a custom CentOS 7 ISO with the necessary packages and
-tooling for deploying on SmartOS and the Joyent Public Cloud.
+tooling for deploying on Baremetal or any cloud.
 
 ## Requirements
 
 In order to use this repo, you need to have the following:
 
- * SmartOS
+ * Centos OS iso
  * A running CentOS instance (physical or virtual) with spare disk space
  * sdc-vmtools
 
@@ -25,7 +25,7 @@ The next script is `create_iso` which takes a series of commands:
  * finish
 
 ### fetch
-This command will fetch the DVD ISO from a given URL (default is Stanford) if
+This command will fetch the DVD ISO from a given URL (default is Aliyun) if
 no currently found.
 
 ### layout
@@ -47,7 +47,7 @@ You can run each command separately or all together.
 Or `./create_iso fetch layout finish`.
 
 The resulting ISO will be ready to boot and install a clean image ready for
-SmartOS and the Joyent Public Cloud.
+Videosolar
 
 ## Default Settings For Image
 
@@ -59,8 +59,7 @@ SmartOS and the Joyent Public Cloud.
 * SELinux is set to permissive
 * Timezone is set to UTC
 * Disk is 10GB in size (8GB for / and the rest for swap)
-* Default packages installed (me-centos
-is from [https://github.com/joyent/me-centos](https://github.com/joyent/me-centos))
+* Default packages installed
 
 
    * @core
